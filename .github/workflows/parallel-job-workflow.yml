@@ -26,10 +26,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Set up Node.js 
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: latest
 
@@ -40,9 +40,6 @@ jobs:
       - name: Print a message for non-main branches
         if: github.ref != 'refs/heads/main'
         run: echo "This is not the main branch."
-
-      - name: Check directory
-        run: pwd; ls -l
 
       - name: Run tests
         run: npm test
@@ -55,10 +52,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Set up Node.js 
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: latest
 
@@ -69,9 +66,6 @@ jobs:
       - name: Print a message for non-main branches
         if: github.ref != 'refs/heads/main'
         run: echo "This is not the main branch."
-
-      - name: Check directory
-        run: pwd; ls -l
 
       - name: Run tests
         run: npm test
